@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title>JS test  </title>
+<style>
+    button{
+        color:aquamarine;
+
+    }
+    button:hover{
+        background-color:blueviolet;
+    }
+    div{
+        margin-top: 20px;
+    }
+    .tiny{
+        margin: 10px;
+        padding: 2px;
+    }
+</style>
+</head>
+
+    <body>
+
+       
+
+        <br />
+<p>JavaScript Alert  Test </p>
+<button onclick="alt();">Click me</button>
+<br>
+<hr>
+<div >
+    <p onclick="rst();">JavaScript replace text Test </p>
+    <button onclick="changeText();">click me </button>
+    <span id="output">Replace me</span>
+    <input id="textbox" type="text"/>
+</div>
+
+
+<br>
+<hr>
+<div  class="cal">
+    <p onclick="();">JavaScript math Test </p>
+    
+    <input id="val1" type="text"/>
+     &nbsp; 
+     <select name="opps" id="opps">
+        <option value="1">+</option>
+        <option value="2">-</option>
+        <option value="3">x</option>
+        <option value="4">&#247;</option>
+      </select>
+     <input id="val2" type="text"/>
+<button onclick="calculate()"> calculate</button>
+<h1 id="ans">:</h1>
+</div>
+
+
+
+<script>
+    function alt(){
+        alert("Hello");
+        alert("its just a test");
+    }
+
+    function changeText(){
+        
+        var txtbox = document.getElementById("textbox");
+
+        txtbox.style.color= "red";
+       var txt = document.getElementById("textbox").value;
+       document.getElementById("output").innerHTML = txt;
+       document.getElementById("textbox").style.display= "none";
+    }
+
+    function rst(){
+        document.getElementById("output").innerHTML = "Replace me";
+        document.getElementById("textbox").style.display= "inline";
+    }
+
+    function calculate(){
+        var op1, op2, opp;
+        op1= parseInt(document.getElementById("val1").value);
+        op2 =parseInt(document.getElementById("val2").value);
+        opp = document.getElementById("opps").value;
+        if(opp == "1")
+        {
+            document.getElementById("ans").innerHTML= op1 + op2;
+        }
+        else if(opp == "2")
+        {
+            document.getElementById("ans").innerHTML= op1 - op2;
+        }
+        else if (opp == "3")
+        {
+            document.getElementById("ans").innerHTML= op1 * op2;
+        }
+        else if (opp == "4")
+        {
+            document.getElementById("ans").innerHTML= op1 / op2;
+        }
+    }
+</script>
+
+
+<div class="tiny">
+    <p >JavaScript plugin Test </p>
+    <script src="JS/tinymce.min.js" referrerpolicy="origin">
+
+    </script>
+    <script>
+        tinymce.init({
+          selector: '#mytextarea'
+        });
+      </script>
+      <form method="post">
+        <textarea id="mytextarea"></textarea>
+      </form>
+</div>
+
+    </body>
+
+</html>
