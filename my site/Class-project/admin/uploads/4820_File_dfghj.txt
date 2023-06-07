@@ -1,0 +1,12 @@
+ngine
+SQL
+Server name
+migs-server
+Database name
+migs-database
+Region
+Central US
+Username
+migs-server-admin
+Password
+34R2X7A570XYAS07$
